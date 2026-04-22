@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Landing Page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { line-height: 1.6; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px; background: #111; color: #fff; position: sticky; top: 0;
+    }
+
+    nav a { margin-left: 25px; color: #fff; text-decoration: none; font-weight: bold; }
+
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+      padding: 80px 60px; background: linear-gradient(to right, #4facfe, #00f2fe); color: white;
+    }
+
+    .btn { padding: 12px 25px; border: none; background: #111; color: white; cursor: pointer; border-radius: 6px; }
+
+    .hero img, .two-col img { width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+
+    .section { padding: 60px; text-align: center; }
+    .section h2 { margin-bottom: 40px; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+    .card {
+      padding: 25px; border-radius: 12px; background: #f5f5f5; transition: 0.3s;
+    }
+
+    .card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 60px; }
+
+    .contact-form {
+      max-width: 500px; margin: auto; text-align: left;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;
+    }
+
+    footer { background: #111; color: #fff; padding: 40px 60px; }
+
+    .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .footer-bottom { text-align: center; margin-top: 20px; font-size: 14px; }
+
+    @media(max-width: 768px) {
+      .hero, .two-col { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MyBrand</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Build Stunning Websites</h2>
+    <p>Modern, responsive and clean landing page design.</p>
+    <button class="btn" onclick="showMessage()">Get Started</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Hero">
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><h3>Fast</h3><p>Optimized performance.</p></div>
+    <div class="card"><h3>Responsive</h3><p>Works on all devices.</p></div>
+    <div class="card"><h3>Modern UI</h3><p>Clean and attractive design.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="two-col" id="about">
+  <div>
+    <h2>About Us</h2>
+    <p>We design and develop beautiful websites that help businesses grow online.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="About">
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-form">
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button class="btn" onclick="submitForm()">Send Message</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>MyBrand</h3>
+      <p>Creating modern websites.</p>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <p>Home</p>
+      <p>Features</p>
+      <p>Contact</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +123456789</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 MyBrand</div>
+</footer>
+
+<script>
+function showMessage() {
+  alert("Welcome! 🚀");
+}
+
+function submitForm() {
+  alert("Message sent successfully!");
+}
+</script>
+
+</body>
+</html>
